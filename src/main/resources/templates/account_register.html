@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog :: Register</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Container styles */
+        .container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ddd;
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Link styles */
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Form styles */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Snjezana's Bloging application</h1>
+        <hr />
+        <a th:href="@{/}">Home</a>
+        <h2>Register New Account</h2>
+        <form action="#"
+              th:action="@{/register}"
+              th:object="${account}"
+              method="POST">
+            <div>
+                <label for="firstname">First Name</label>
+                <input id="firstname" type="text" th:field="*{firstName}" placeholder="First Name"/>
+            </div>
+            <div>
+                <label for="lastname">Last Name</label>
+                <input id="lastname" type="text" th:field="*{lastName}" placeholder="Last Name"/>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="text" th:field="*{email}" placeholder="Email"/>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" th:field="*{password}" placeholder="Password"/>
+            </div>
+            <button type="submit">Register!</button>
+        </form>
+    </div>
+
+</body>
+</html>

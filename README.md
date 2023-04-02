@@ -48,7 +48,8 @@ Prilikom ulaska na početnu stranicu aplikacije, potrebno je kreirati račun oda
 kreira račun, vraća se na formu za prijavu gdje je potrebno prijaviti se odabirom opcije "Login". Kako bi se korisnik 
 prijavio u aplikciju, potrebno je unijeti e-mail adresu i lozinku. Nakon što se korisnik prijavi, otvaraju se mogućnosti 
 ažuriranja računa, kreiranja novog bloga te odjave. Odabirom opcije ažuriranja računa, otvara se forma gdje postoji 
-mogućnost izmjene imena i prezimena. Klikom na gumb "Save", spremaju se podaci o korisniku. Kako bi se kreirao novi blog 
+mogućnost izmjene imena i prezimena. Klikom na gumb "Save", spremaju se podaci o korisniku. Kada se korisnik logira u 
+aplikaciju, na početnoj stranici se prikazuju svi blogovi. Kako bi se kreirao novi blog 
 potrebno je odabrati opciju "New Blog" gdje korisnik upisuje naziv bloga te njegov sadržaj. Kako bi se isti spremio i 
 objavio, potrebno je kliknuti na gumb "Publish Blog". Nakon objave bloga, isti je moguće uređivati i brisati, ali samo 
 od strane vlasnika, odnosno, prijavljenog korisnika koji ga je kreirao. Blog je moguće izmijeniti odabirom opcije "Edit", 

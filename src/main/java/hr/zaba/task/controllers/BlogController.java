@@ -43,6 +43,7 @@ public class BlogController {
         // if post exists put it in model
         if (optionalPost.isPresent() && principal != null) {
             Blog blog = optionalPost.get();
+            // puts entity in model
             model.addAttribute("blog", blog);
             model.addAttribute("authUsername", principal.getName());
             return "blog";
@@ -91,14 +92,7 @@ public class BlogController {
     @PostMapping("/blogs/new")
     @PreAuthorize("isAuthenticated()")
     public String createNewBlog(@ModelAttribute Blog blog, Principal principal) {
-        String authUsername = "anonymousUser";
-        if (principal != null) {
-            authUsername = principal.getName();
-        }
-        if (blog.getAccount().getEmail().compareToIgnoreCase(authUsername) != 0) {
-            // TODO: some kind of error?
-            // our account email on the Post not equal to current logged in account!
-        }
+
         blogService.save(blog);
         return "redirect:/blogs/" + blog.getId();
     }
